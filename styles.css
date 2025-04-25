@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Arial", sans-serif;
+    background: #fffafc;
+    overflow-x: hidden;
+  }
+  
+  .section {
+    height: 100vh;
+    padding: 60px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .intro-text {
+    font-family: "Sacramento", cursive;
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .scroll-down-arrow {
+    font-size: 2rem;
+    opacity: 0;
+    color: #b03a59;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .scroll-down-arrow span {
+    font-size: 14px;
+    display: block;
+  }  
+  #first-arrow {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateX(-50%) translateY(0);
+    }
+    40% {
+      transform: translateX(-50%) translateY(-20px);
+    }
+    60% {
+      transform: translateX(-50%) translateY(-10px);
+    }
+  }
+  
+  .gallery-wrapper {
+    position: relative;
+    height: 100vh;
+  }
+  
+  .photo-gallery {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .photo-gallery img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 80vh;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  #gallery-arrow {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+  
+  .sakura {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(to bottom, #ffe6f0, #ffffff);
+    overflow: hidden;
+  }
+  
+  .petal {
+    position: absolute;
+    pointer-events: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 10;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .petal-type1 {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%23FFB7C5' d='M256 0c28 80 96 112 128 144s48 80 32 112-80 32-112 32-64 32-80 48-32 16-48 0-32-64-32-96-16-64 0-96 64-80 112-144z'/></svg>");
+  }
+  
+  .petal-type2 {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%23FFC0CB' d='M256 0c36 76 108 100 140 132s36 76 20 108-88 28-120 28-52 28-72 44-36 12-52-4-28-60-28-92-8-64 8-96 60-72 104-120z'/></svg>");
+  }
+  
+  .petal-type3 {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%23FF69B4' d='M256 0c32 60 96 88 128 120s24 76 4 100-76 20-108 20-44 24-64 40-40 8-52-8-20-52-20-84-4-60 12-92 56-60 100-96z'/></svg>");
+  }
+  
+  .farewell-message {
+    position: absolute;
+    bottom: 30%;
+    width: 100%;
+    font-size: 2.5rem;
+    color: #b03a59;
+    font-family: "Sacramento", cursive;
+    text-align: center;
+  }
+
+  #farewell-message {
+    opacity: 0;
+    transition: opacity 2s ease;
+  }
+  
+  
