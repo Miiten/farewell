@@ -1,4 +1,3 @@
-
 document.addEventListener("click", () => {
     const audio = document.getElementById("memory-music");
     if (audio.paused) {
@@ -104,7 +103,7 @@ document.addEventListener("click", () => {
                 console.warn("Autoplay blocked. Waiting for user interaction.", e);
               });
   
-              observer.unobserve(entry.target);
+              // observer.unobserve(entry.target);
             }
           });
         },
